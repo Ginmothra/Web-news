@@ -1,41 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create News Page</title>
+    <title>News Form</title>
+    <link rel="stylesheet" type="text/css" href="../css/news.css">
 </head>
 <body>
     <?php
-    include_once '../navbar.php';
-    include_once "../Login/check_login.php";
+    include_once('../navbar.php');
+    include_once('../Login/check_login.php');
     ?>
-    <form action="news_process.php" method="post" enctype="multipart/form-data">
-        <div>
-            <label for="">Title</label>
-            <input type="text" name="title">
-        </div>
-        <div>
-            <label for="">Picture</label>
-            <input type="file" name="picture">
-        </div>
-        <div>
-            <label for="">Description</label>
-            <textarea name="description">
-
-
-
-
-            
-            </textarea>
-        </div>
-        <div>
-            <label for="">date</label>
-            <input type="date" name="date">
-        </div>
-        <div>
-            <button type="submit">Add news</button>
-        </div>
+    <form action="news_proccess.php" method="post" enctype="multipart/form-data" style="margin-top: 1rem;">
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title" placeholder="Enter title" required>
+        <label for="picture">Picture:</label>
+        <input type="file" id="picture" name="picture" required>
+        <label for="description">Description:</label>
+        <textarea id="description" name="description" placeholder="Enter description" required></textarea>
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date" required>
+        <button type="submit">Add news</button>
     </form>
 </body>
 </html>
