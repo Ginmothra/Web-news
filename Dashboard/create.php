@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>News Form</title>
     <link rel="stylesheet" type="text/css" href="../css/news.css">
 </head>
@@ -9,7 +11,7 @@
     include_once('../navbar.php');
     include_once('../Login/check_login.php');
     ?>
-    <form action="news_proccess.php" method="post" enctype="multipart/form-data" style="margin-top: 1rem;">
+    <form action="news_process.php" method="post" enctype="multipart/form-data" style="margin-top: 1rem;">
         <label for="title">Title:</label>
         <input type="text" id="title" name="title" placeholder="Enter title" required>
         <label for="picture">Picture:</label>

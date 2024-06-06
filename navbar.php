@@ -64,6 +64,8 @@
             echo '<i class="bi bi-globe"></i> DASHBOARD';
           } elseif ($currentFile === 'create.php'){
             echo '<i class="bi bi-globe"></i> CREATE NEWS';
+          } elseif ($currentFile === 'edit.php'){
+            echo '<i class="bi bi-globe"></i> EDIT NEWS';
           }
           ?>
         </span>
