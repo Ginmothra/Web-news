@@ -51,7 +51,6 @@ h2{
     background: #4FC3A1;
 }
 
-
 .fl-table thead th:nth-child(odd) {
     color: #ffffff;
     background: #324960;
@@ -125,4 +124,11 @@ h2{
         display: block;
         text-align: center;
     }
+}
+
+.truncate {
+    max-width: 150px; /* Adjust the width as needed */
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }

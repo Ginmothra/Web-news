@@ -40,10 +40,10 @@ $data = $news->fetch_all(MYSQLI_ASSOC);
         ?>
         <tr>
             <td><?= htmlspecialchars($v['id']) ?></td>
-            <td><?= htmlspecialchars($v['title']) ?></td>
+            <td class="truncate"><?= htmlspecialchars($v['title']) ?></td>
             <!-- Ubah jalur gambar sesuai dengan jalur yang benar -->
             <td><img src="../assets/news_pictures/<?= htmlspecialchars($v['picture']) ?>" width="100px" alt=""></td>
-            <td><?= htmlspecialchars($v['description']) ?></td>
+            <td class="truncate"><?= htmlspecialchars($v['description']) ?></td>
             <td><?= htmlspecialchars($v['date']) ?></td>
             <td><a href="edit.php?id_news=<?= htmlspecialchars($v['id']) ?>" style="color:black; font-size: 1rem;">Edit</a></td>
             <td><a href="delete.php?id_news=<?= htmlspecialchars($v['id']) ?>" style="color:black; font-size: 1rem;">Delete</a></td>

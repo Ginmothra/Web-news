@@ -1,0 +1,81 @@
+/* Reset dasar untuk margin dan padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Gaya untuk body */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+/* Gaya untuk header */
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    width: 100%;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+/* Gaya untuk main */
+main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+    max-width: 1200px; /* Membatasi lebar maksimum main */
+    margin: auto; /* Mengatur posisi tengah */
+}
+
+/* Gaya untuk article */
+article {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    width: calc(25% - 20px); /* Mengatur lebar artikel agar 4 artikel dalam 1 baris */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+article h2 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+article p {
+    color: #555;
+    font-size: 0.9em;
+    margin-bottom: 10px;
+}
+
+article div {
+    color: #333;
+}
+
+/* Responsive untuk layar yang lebih kecil */
+@media (max-width: 1200px) {
+    article {
+        width: calc(33.333% - 20px); /* 3 artikel dalam 1 baris */
+    }
+}
+
+@media (max-width: 900px) {
+    article {
+        width: calc(50% - 20px); /* 2 artikel dalam 1 baris */
+    }
+}
+
+@media (max-width: 600px) {
+    article {
+        width: 100%; /* 1 artikel dalam 1 baris */
+    }
+}

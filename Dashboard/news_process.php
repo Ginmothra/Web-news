@@ -12,6 +12,7 @@ $picture = $_FILES['picture'];
 $description = $_POST['description'];
 $date = $_POST['date'];
 $id_user = $user['id'];
+$creator = $user['username'];
 
 $rename = md5(date("Y-m-d H:i:s")).basename($picture['name']);
 $imagePath = '../assets/news_pictures/'.$rename;
@@ -21,8 +22,8 @@ if (!is_dir('../assets/news_pictures')) {
 }
 
 if (move_uploaded_file($picture['tmp_name'], $imagePath)) {
-    $sql = "INSERT INTO news (title, picture, description, date, id_user) 
-    VALUES ('$title', '$rename', '$description', '$date', $id_user)";
+    $sql = "INSERT INTO news (title, picture, description, date, id_user, creator) 
+    VALUES ('$title', '$rename', '$description', '$date', $id_user, '$creator')";
 
     if ($db->query($sql)) {
         phpAlert("Berita baru ditambahkan");
